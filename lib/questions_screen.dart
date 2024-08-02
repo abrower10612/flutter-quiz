@@ -33,10 +33,13 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             ),
             const SizedBox(height: 30),
             ...currentQuestion.answers.map(
-              (answer) {
-                return AnswerButton(
-                  answerText: answer,
-                  onPressed: () {},
+              (answerText) {
+                return Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: AnswerButton(
+                    answerText: answerText,
+                    onPressed: () {},
+                  ),
                 );
               },
             ),
